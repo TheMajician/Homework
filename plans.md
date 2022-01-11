@@ -4,6 +4,7 @@ To Do List
 + classes
 + work
 + eat
++ message friends
 
 
 ---------
