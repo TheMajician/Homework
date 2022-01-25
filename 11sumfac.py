@@ -16,6 +16,8 @@ for i in range(1, n+1):
 	f *= i
 print(n, s, f)
 
+#I worked on this with Inglis, Paul, and Jeremy
+
 """
 python3 11sumfac.py
 5 15 120
