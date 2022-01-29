@@ -27,6 +27,8 @@ for i in range(size):
 		dna += 'C'
 
 print(f'{size}, {AT/size:.2f}, {dna}')
+
+# did in class
 """
 python3 22atseq.py
 30 0.6666666666666666 ATTACCGTAATCTACTATTAAGTCACAACC
