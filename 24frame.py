@@ -13,15 +13,7 @@ for position in range(len(dna)):   #don't know how to format this. end =' ' ????
 	else: print(0, end =' ')
 	print(dna[position])
 
-#for frame in range(3):
-	#print(frame)
-		
-	#nt = dna[position]
-	#print(nt)
-"""	
-for i in range(len(dna)):
-	print(i)
-"""	
+# worked with Inglis, Kim, Iris	
 """
 python3 24frame.py
 0 0 A
