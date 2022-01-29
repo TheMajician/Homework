@@ -14,6 +14,8 @@ for i in range(len(dna)):
 	
 print(rc)
 
+#worked with Inglis, Kim, Iris
+
 """
 python3 23anti.py
 TTTTTTTTTTTCAGT
