@@ -6,7 +6,7 @@
 
 dna = 'ATGGCCTTT'
 
-for position in range(len(dna)):   #don't know how to format this. end =' ' ????
+for position in range(len(dna)):
 	print(position, end =' ')
 	if (position+1) % 2 == 0: print(1, end =' ')
 	elif (position+1) % 3 == 0: print(2, end =' ')
