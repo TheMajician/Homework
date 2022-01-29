@@ -7,7 +7,7 @@
 dna = 'ACAGAGCCAGCAGATATACAGCAGATACTAT' # feel free to change
 count = 0
 for i in range(len(dna)):
-	if dna[i] == 'G':   count += 1
+	if dna[i] == 'G' and 'C':   count += 1
 	elif dna[i] == 'C': count += 1
 frac= count/len(dna)
 
@@ -17,6 +17,8 @@ print('%.2f' % (frac))
 print('{:.2f}' .format(frac))
 #Method 3 - f strings
 print(f'{count/len(dna):.2f}')
+
+#did in class
 
 """
 python3 21gc.py
