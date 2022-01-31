@@ -31,14 +31,22 @@ for i in range(0, len(seq)-w+1):
 
 #worked with Esha
 
+print("PROS",'\t\t\t\t', "CONS")
+print("-Easy to visulize window", '\t', "-Many more lines and typing")
+print("'sliding' across sequences.", '\t', "-Not easy to change parameters")
+print("-No coding knowledge friendly",'\t', "(window size)")
+
+print("NOTE")
+print("--nested loops can change parameters quickly")
 """
 PROS
--Easy to visulize window "sliding" across sequences. 
--No coding knowledge friendly
+
+
 
 CONS
--Many more lines and typing
--Not easy to change parameters (window size)
+
+
+
 
 """
 
