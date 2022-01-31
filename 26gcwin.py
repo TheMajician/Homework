@@ -19,6 +19,7 @@ for i in range(len(seq)-w+1):
 	print(f'{x} {window} {count/w:.4f}')
 	
 #boyfriend and I worked on this together :)
+#he isn't a programing major, but found this really interesting
 
 """
 python3 26gcwin.py
