@@ -38,17 +38,7 @@ print("-No coding knowledge friendly",'\t', "(window size)")
 
 print("NOTE")
 print("--nested loops can change parameters quickly")
-"""
-PROS
 
-
-
-CONS
-
-
-
-
-"""
 
 """
 python3 27gcwin.py
