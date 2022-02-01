@@ -25,8 +25,8 @@ for i in range(len(seq) -w):              # moving window +1 and -1
 # Nested is much more straight forward, but recounts every window, which when windows are large may take a long time
 	
 #========================================================================
-
-# first way, but doesn't meet +1 -1 requirments
+#CLASS NOTES		
+	# first way, but doesn't meet +1 -1 requirments
 """
 for i in range(0, len(seq)-w+1):
 	total = 0
