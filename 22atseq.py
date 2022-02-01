@@ -29,6 +29,20 @@ for i in range(size):
 print(f'{size}, {AT/size:.2f}, {dna}')
 
 # did in class
+
+#=============================================================
+#alternative method from class using random.choice
+"""
+GC = 0
+gcseq ="AAATTTCCGG" #number of nt in string give percentage
+newseq =""
+for i in range(30):
+	nt = random.choice(gcseq)
+	newseq += nt
+	if nt == 'C' or nt == 'G': GC +=1
+print(f'{len(newseq)}, {GC/len(newseq):.3f}, {newseq}')
+
+"""
 """
 python3 22atseq.py
 30 0.6666666666666666 ATTACCGTAATCTACTATTAAGTCACAACC
