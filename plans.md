@@ -2,13 +2,13 @@ To Do List
 ==========
 
 + read
-	+170
-	+137
+	+ 170
+	+ 137
 + review MCB185 HW (new and old)
 + Job apps *friday*
 	+ Research statement
 	+ DEI 
-	+Coverletter
+	+ Coverletter
 + URC abstract *next tuesday*
 
 
