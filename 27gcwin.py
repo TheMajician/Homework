@@ -10,8 +10,24 @@
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
+gc = 0
 
+for nt in seq[:w]:                        # first window, inital count
+	if nt == 'C' or nt == 'G': gc += 1
+for i in range(len(seq) -w):              # moving window +1 and -1 
+	on = seq[i+w]
+	off = seq[i]
+	if on  == 'C' or  on == 'G': gc += 1
+	if off == 'C' or off == 'G': gc -= 1
+	print(f'{i}, {seq[i:i+w]}, {gc/w:.4f}')
+	
+# Non-nested saves computing time by not recounting GC content in each new window, but isn't as straight forward looking
+# Nested is much more straight forward, but recounts every window, which when windows are large may take a long time
+	
+#========================================================================
 
+# first way, but doesn't meet +1 -1 requirments
+"""
 for i in range(0, len(seq)-w+1):
 	total = 0
 	print(i, seq[i:i+w], end =' ')
@@ -38,7 +54,7 @@ print("-No coding knowledge friendly",'\t', "(window size)")
 
 print("NOTE")
 print("--nested loops can change parameters quickly")
-
+"""
 
 """
 python3 27gcwin.py
