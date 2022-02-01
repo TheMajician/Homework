@@ -16,7 +16,19 @@ for position in range(len(aa)-1):
 print(total)
 
 #kinda worked with Inglis, Kim, Iris to understand where to start
-		
+
+#=======================================================================
+#class notes
+	#use loops without range
+"""
+count = 0
+
+for aa1 in aa:
+	for aa2 in aa:
+		if aa2 > aa1: 
+			print(aa1, aa2)
+			count += 1
+"""
 """
 python3 25aapairs.py
 A C
