@@ -42,10 +42,11 @@ print(f'Std. dev: {std:.3f}')
 
 # Median
 if len(nums)%2 ==0:
-	mid = int(len(nums)/2)
+	mid = int(len(nums)/2)  #average it out
+	median = (nums[mid-1]+nums[mid])/2
 else:
 	mid = int((len(nums)+1)/2)
-median = nums[mid-1]
+	median = nums[mid-1]
 print("Median:", median)
 """
 python3 30stats.py 3 1 4 1 5
