@@ -15,7 +15,8 @@ for DC in range(1, 21):
 		r1 = random.randint(1, 20)
 		r2 = random.randint(1, 20)
 		if r1+5 > DC: ring += 1
-		if r1 > r2 and r1 >= DC: cloak += 1
-		if r2 > r1 and r2 >= DC: cloak += 1
+		if max(r1, r2) > DC: cloak += 1   # looks prettier
+		#if r1 > r2 and r1 >= DC: cloak += 1
+		#if r2 > r1 and r2 >= DC: cloak += 1
 	print(f'\t{DC}\t{ring/rolls:.1f}\t{cloak/rolls:.1f}')
 print("Fire Ring has slight advantage over Fire Cloak")
