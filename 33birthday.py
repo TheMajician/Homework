@@ -15,18 +15,32 @@
 
 import random
 
-cal = [0]*365
-ppl = 25
-trl = 5
+ppl = 23
+trl = 5000
+shared = 0
+
 for t in range(trl):
-	shared = 0
+	cal = [0]*365
 	for p in range(ppl):
-		r = random.randint(1, len(cal)-1)
+		r = random.randint(0, len(cal)-1)
 		cal[r] += 1
-		print(cal)
-	for i in cal:
-		if cal[i] > 1: shared += 1   # not working, always give shared = 0
-	print(t, shared)
+		#print(cal)
+	for value in cal:
+		if value > 1: 
+			shared += 1
+			break
+print(shared/trl)
+
+"""
+# Practice	
+shared = 0
+L = [0, 0, 0, 1, 2, 1, 0, 1, 2]
+for value in L:
+	if value > 1: 
+		shared += 1   # not working, always give shared = 0	
+		break
+print(shared)
+"""
 
 """
 python3 33birthday.py
