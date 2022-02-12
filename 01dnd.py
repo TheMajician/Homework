@@ -12,6 +12,7 @@ print("Normal", end ='\t')
 print("Adv", end ='\t')
 print("Dis")
 #for i in range(trials):
+
 for DC in range(1, 21):
 	normal = 0
 	adv = 0
@@ -21,9 +22,8 @@ for DC in range(1, 21):
 		r2 = random.randint(1, 20)
 		# Normal
 		if r1 >= DC: normal += 1
-		else:       normal += 0  
 		# Advantage	
-		if r1 > r2 and r1 >= DC: adv += 1
+		if r1 > r2 and r1 >= DC: adv += 1   # could use max and min s
 		if r2 > r1 and r2 >= DC: adv += 1
 		# Disadvantage
 		if r1 < r2 and r1 >= DC: dis +=1
