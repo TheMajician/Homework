@@ -5,6 +5,21 @@ import random
 
 rolls = 10000
 
+#most optimal?
+re = 6
+for re in range(1, 8):
+	dam = 0
+	for i in range(rolls):
+		r1 = random.randint(1, 10)
+		r2 = random.randint(1, 10)
+		if r1 < re: dam += r2
+		else:      dam += r1
+	print(f'Re-roll {re} Average Damage: {dam/rolls}')
+	
+	
+	
+# Old code for each re-roll value
+"""
 #Jorg
 jdam = 0
 for i in range(rolls):
@@ -22,13 +37,4 @@ for i in range(rolls):
 	if r1 < 4: gdam += r2
 	else:      gdam += r1
 print(f'Gastin:{gdam/rolls}')
- 		
-#most optimal?
-dam = 0
-re = 6
-for i in range(rolls):
-	r1 = random.randint(1, 10)
-	r2 = random.randint(1, 10)
-	if r1 < re: dam += r2
-	else:      dam += r1
-print(f'Highest Average Damage: {dam/rolls} with re-rolls at {re-1}')
+"""
