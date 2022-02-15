@@ -20,5 +20,4 @@ adepavg = adep/trails
 diff = adepavg - normavg
 print(f'Normal\tAdept\tDifference')	
 print(f'{normavg}\t{adepavg}\t{diff:.4f}')
-	
-#not giving different values.....?
+
