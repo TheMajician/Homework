@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 import random
 
-trials = 5
+trl = 1000
 die = 0
 sta = 0
 rev = 0
 
-for i in range(trials):
+for i in range(trl):
 	fail = 0
 	suc = 0
 	while True:
@@ -27,9 +27,9 @@ for i in range(trials):
 			sta += 1
 			#print("stablized")
 			break
-print(F'Died: {die}')
-print(f'Stabilized: {sta}')
-print(f'Revived: {rev}')
+print(F'Died: {die/trl}')
+print(f'Stabilized: {sta/trl}')
+print(f'Revived: {rev/trl}')
 
 	
 		
