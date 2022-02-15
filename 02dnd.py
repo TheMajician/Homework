@@ -14,19 +14,17 @@ for i in range(trl):
 	
 		if   r == 1 : fail += 2
 		elif r < 10 : fail += 1
-		elif r >= 10: suc += 1
-		else:  
+		elif r ==20: 
 			rev += 1
-			#print('revived')
 			break
+		else:        suc += 1
 		if fail >= 3:
 			die += 1
-			#print("died")
 			break
 		if suc >= 3:
 			sta += 1
-			#print("stablized")
 			break
+			
 print("Chances to...")
 print(F'Die: {die/trl}')
 print(f'Stabilize: {sta/trl}')
