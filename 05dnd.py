@@ -13,7 +13,7 @@ for re in range(1, 8):
 		r1 = random.randint(1, 10)
 		r2 = random.randint(1, 10)
 		if r1 < re: dam += r2
-		else:      dam += r1
+		else:      dam += r1git 
 	print(f'Re-roll {re} Average Damage: {dam/rolls}')
 	
 	
