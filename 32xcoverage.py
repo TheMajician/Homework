@@ -40,8 +40,6 @@ avg = sum/(gsize-2*rlen)
 
 print(f'{min} {max} {avg:.3f}')
 
-# random???
-# r = 17
 
 
 """
