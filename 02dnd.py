@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import random
 
-trl = 1000
+trl = 10000
 die = 0
 sta = 0
 rev = 0
@@ -27,9 +27,10 @@ for i in range(trl):
 			sta += 1
 			#print("stablized")
 			break
-print(F'Died: {die/trl}')
-print(f'Stabilized: {sta/trl}')
-print(f'Revived: {rev/trl}')
+print("Chances to...")
+print(F'Die: {die/trl}')
+print(f'Stabilize: {sta/trl}')
+print(f'Revive: {rev/trl}')
 
 	
 		
