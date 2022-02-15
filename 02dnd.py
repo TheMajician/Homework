@@ -17,17 +17,19 @@ for i in range(trials):
 		elif r >= 10: suc += 1
 		else:  
 			rev += 1
-			print('revived')
+			#print('revived')
 			break
 		if fail >= 3:
 			die += 1
-			print("died")
+			#print("died")
 			break
 		if suc >= 3:
 			sta += 1
-			print("stablized")
+			#print("stablized")
 			break
-print(die, sta, rev) # not stopping loop and not giving an output
+print(F'Died: {die}')
+print(f'Stabilized: {sta}')
+print(f'Revived: {rev}')
 
 	
 		
