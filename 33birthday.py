@@ -29,7 +29,7 @@ for t in range(trl):
 		if value > 1: 
 			shared += 1
 			break
-print(shared/trl)
+print("Chance to share a birthday:", shared/trl)
 
 """
 # Practice	
