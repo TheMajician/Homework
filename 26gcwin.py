@@ -7,15 +7,13 @@
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
-x = 0
 
 for i in range(len(seq)-w+1):
-	window = seq[x:x+w]
-	x += 1
+	window = seq[i:i+w]
 	count = 0
 	for n in window:
 		if n == 'C': count += 1
-		if n == 'G': count += 1
+		elif n == 'G': count += 1
 	print(f'{x} {window} {count/w:.4f}')
 	
 #boyfriend and I worked on this together :)
