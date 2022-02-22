@@ -17,7 +17,7 @@ import sys
 #   Create a function for amphipathic alpha-helix
 
 
-# Step One: read files
+# FUNCTIONS
 filename = sys.argv[1]
 def readfasta(filename):
 	records = []
@@ -25,23 +25,58 @@ def readfasta(filename):
 	with open(filename) as fp:
 		for line in fp.readlines():
 			line = line.rstrip()
+			if len(line) == 0: continue
 			if line[0] == ">":
-				words = line.split()
-				id = words[0][1:]
 				#ids.append(words[0][1:])
 				if seq != '': 
 					records.append((id, seq))
+				words = line.split()
+				id = words[0][1:]
 				seq = ''
 			else: 
 				seq += line
 		records.append((id, seq))
 	return records
 
-#stuff = readfasta(filename)
-#print(stuff)
+def kdequ(pep):
+	kd = 0
+	for aa in pep:
+		if   aa == "I": kd += 4.5
+		elif aa == "V": kd += 4.2
+		elif aa == "L": kd += 3.8
+		elif aa == "F": kd += 2.8
+		elif aa == "C": kd += 2.5
+		elif aa == "M": kd += 1.9
+		elif aa == "A": kd += 1.8
+		elif aa == "G": kd += -0.4
+		elif aa == "T": kd += -0.7
+		elif aa == "S": kd += -0.8
+		elif aa == "W": kd += -0.9
+		elif aa == "Y": kd += -1.3
+		elif aa == "P": kd += -1.6
+		elif aa == "H": kd += -3.2
+		elif aa == "E": kd += -3.5
+		elif aa == "Q": kd += -3.5
+		elif aa == "D": kd += -3.5
+		elif aa == "N": kd += -3.5
+		elif aa == "K": kd += -3.9
+		elif aa == "R": kd += -4.5
+			
+	return kd/len(pep) 
 
+def hahelix(sequence, length, threshold):
+	for i in range(len(sequence)-length +1):
+		pep = sequence[i:i+length]
+		if "P" in pep: continue
+		if kdequ(pep) > threshold: 
+			return True
+	return False
+
+#CODE
 for id, seq in readfasta(filename):
-	print(id, seq)
+	if hahelix(seq[0:30],8,2.5) and hahelix(seq[30:], 11, 2.0):
+		print(id) 
+
 
 """
 python3 40transmembrane.py ../Data/at_prots.fa
