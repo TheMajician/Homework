@@ -19,9 +19,9 @@ parser = argparse.ArgumentParser(description='Outputs sequence with low entrpy r
 # required arguments
 parser.add_argument('--fasta', required=True, type=str,
 	metavar='<str>', help='requires fasta file')
-parser.add_argument('--windowsize', required=True, type=int,
+parser.add_argument('--ws', required=True, type=int,
 	metavar='<int>', help='requires window size')
-parser.add_argument('--entropy threshold', required=True, type=float,
+parser.add_argument('--th', required=True, type=float,
 	metavar='<float>', help='requires entropy threshold')
 # switches
 parser.add_argument('--lowercase', action='store_true',
@@ -31,13 +31,14 @@ arg = parser.parse_args()
 
 output = ''
 for name, seq in mcb.read_fasta(arg.fasta):
-	for i in range(0, len(seq)-arg.windowsize+1):
-		window = seq[i:i+arg.windowsize]
-		if mcb.hcalc(window) < arg.threshhold:
+	for i in range(0, len(seq)-arg.ws+1):
+		window = seq[i:i+arg.ws]
+		if mcb.hcalc(window) < arg.th:
 			if arg.lowercase: output += window.lower()
-			else:             output += 'n' * arg.windowsize
+			else:             output += 'n' * arg.ws
 		else: output += window
 print(name, output)
 		
 		
-		
+# issues
+# not reading the first seq name, or showing as separate sequence	
