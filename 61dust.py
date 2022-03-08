@@ -29,15 +29,16 @@ parser.add_argument('--lowercase', action='store_true',
 # finalization
 arg = parser.parse_args()
 
-output = ''
+
 for name, seq in mcb.read_fasta(arg.fasta):
-	for i in range(0, len(seq)-arg.ws+1):
+	output = ''
+	for i in range(0, len(seq)-arg.ws+1, arg.ws):
 		window = seq[i:i+arg.ws]
 		if mcb.hcalc(window) < arg.th:
 			if arg.lowercase: output += window.lower()
 			else:             output += 'n' * arg.ws
 		else: output += window
-print(name, output)
+	print(name, output)
 		
 		
 # issues
